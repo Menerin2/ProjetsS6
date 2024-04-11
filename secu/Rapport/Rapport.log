@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.16)  10 APR 2024 22:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.16)  11 APR 2024 17:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/moi/Documents/cours/L3/S6/Securite/DM/Rapport/Rapport.tex
-(/home/moi/Documents/cours/L3/S6/Securite/DM/Rapport/Rapport.tex
+**/home/moi/Documents/cours/L3/S6/Projets/ProjetsS6/secu/Rapport/Rapport.tex
+(/home/moi/Documents/cours/L3/S6/Projets/ProjetsS6/secu/Rapport/Rapport.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2022-12-17> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -395,7 +395,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<tungsten.png, id=45, 697.60625pt x 41.15375pt>
+<tungsten.png, id=60, 697.60625pt x 41.15375pt>
 File: tungsten.png Graphic file (type png)
 <use tungsten.png>
 Package pdftex.def Info: tungsten.png  used on input line 51.
@@ -405,7 +405,7 @@ Overfull \hbox (3.80226pt too wide) in paragraph at lines 49--53
 []
  []
 
-<chiffre.png, id=47, 693.59125pt x 38.1425pt>
+<chiffre.png, id=62, 693.59125pt x 38.1425pt>
 File: chiffre.png Graphic file (type png)
 <use chiffre.png>
 Package pdftex.def Info: chiffre.png  used on input line 56.
@@ -416,37 +416,43 @@ Overfull \hbox (1.79477pt too wide) in paragraph at lines 54--58
  []
 
 [2 <./tungsten.png> <./chiffre.png>]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 62.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 62.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 61.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 61.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ) (./ui.py
 consecutive:
-) [3]
-<ajoutUtil.png, id=96, 491.8375pt x 34.1275pt>
+[3])
+<ajoutUtil.png, id=113, 491.8375pt x 34.1275pt>
 File: ajoutUtil.png Graphic file (type png)
 <use ajoutUtil.png>
-Package pdftex.def Info: ajoutUtil.png  used on input line 65.
+Package pdftex.def Info: ajoutUtil.png  used on input line 64.
 (pdftex.def)             Requested size: 245.91814pt x 17.06369pt.
  (./ui.py
 consecutive:
-) [4 <./ajoutUtil.png>] (./Rapport.aux)
+) (./ui.py
+consecutive:
+) (./ui.py
+consecutive:
+[4 <./ajoutUtil.png>]) (./ui.py
+consecutive:
+) [5] [6] (./Rapport.aux)
 Package rerunfilecheck Info: File `Rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 9966683AFC9FD445E4173AEED011A821;710.
+(rerunfilecheck)             Checksum: 2FD9895B7ED6AE4A1F79704734F88B5D;1065.
  ) 
 Here is how much of TeX's memory you used:
- 14162 strings out of 476093
- 217109 string characters out of 5791591
+ 14221 strings out of 476093
+ 217876 string characters out of 5791591
  2064793 words of memory out of 5000000
- 34284 multiletter control sequences out of 15000+600000
+ 34307 multiletter control sequences out of 15000+600000
  524334 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,6n,77p,316b,1289s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,6n,77p,327b,2105s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on Rapport.pdf (4 pages, 166993 bytes).
+Output written on Rapport.pdf (6 pages, 173516 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 142 compressed objects within 2 object streams
- 67 named destinations out of 1000 (max. 500000)
- 64 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 224 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
+ 97 named destinations out of 1000 (max. 500000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

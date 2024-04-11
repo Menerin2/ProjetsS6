@@ -1,5 +1,6 @@
 from ajoutUtilFct import *
 import hashlib
+import random
 
 def hach(mdp):
     bmdp = bytes(mdp, "utf-8")
@@ -7,11 +8,10 @@ def hach(mdp):
     m.update(bmdp)
     return m.hexdigest()
 
-def salt(mdp, salt):
+def salting(mdp, salt):
     hashed_password = hashlib.pbkdf2_hmac('sha256', mdp.encode('utf-8'), salt, 100000)
     return hashed_password
 
-mdp = "123456789"
-sal = "Ceci est mon sel"
-hashed_password = hashlib.pbkdf2_hmac('sha256', mdp.encode('utf-8'), salt, 100000)
-print(hashed_password)
+password = '123456789'
+salt = random.getrandbits(16*8).to_bytes(16, 'little')
+print(salting(password, salt))

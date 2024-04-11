@@ -1,4 +1,6 @@
 import sqlite3
+import hashlib
+import random
 
 def creaUtil():
   connection = sqlite3.connect("donnees.db")
@@ -37,8 +39,12 @@ def AjoutUtilisateur():
       is_mdp_incorrect = False
     else:
       print("Vos entrees ne correspondent pas")
-  #On ajoute l'utilisateur a la base de donnee
-  curseur.execute("INSERT INTO utilisateurs VALUES('"+id+"','"+mdp+"')")
+  return [id, mdp]
+ 
+def addUtilBDD(ids):
+  connection = sqlite3.connect("donnees.db")
+  curseur = connection.cursor()
+  curseur.execute("INSERT INTO utilisateurs VALUES('"+ids[0]+"','"+ids[1]+"')")
   connection.commit()
 
 def printUtil():
@@ -66,4 +72,30 @@ def Verification():
       is_not_connected = False
   print("Bravo ! Vous etes connecte")
 
-printUtil()
+def hachage(ids):
+  bmdp = bytes(ids[1], "utf-8")
+  m = hashlib.sha256()
+  m.update(bmdp)
+  ids[1] = m.hexdigest()
+  return ids
+
+def hachageSalage(ids, salt):
+    bmdp = bytes(ids[1], "utf-8")
+    bsalt = bytes(salt, "utf-8")
+    hashed_password = hashlib.pbkdf2_hmac('sha256', bmdp, bsalt, 100000)
+    ids[1] = hashed_password
+    return ids
+
+def randomHachageSalage(ids):
+    bmdp = bytes(ids[1], "utf-8")
+    salt = random.getrandbits(16*8).to_bytes(16, 'little')
+    hashed_password = hashlib.pbkdf2_hmac('sha256', bmdp, salt, 100000)
+    ids[1] = hashed_password
+    connection = sqlite3.connect("donnes.db")
+    curseur = connection.cursor()
+    curseur.execute("INSERT INTO sels VALUES('"+ids[0]+"','"+salt+"')")
+    connection.commit()
+    return ids
+
+password = '123456789'
+print(randomHachageSalage(["leo", "hehe"]))
