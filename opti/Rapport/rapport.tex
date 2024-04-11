@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\title{Rapport du porjet d'Optimisation\newline
+    \textit{One Pizza is all you need}}
+\author{LOI Léo}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Le problème :}
+
+Nous ouvrons une pizzeria qui n'a au menu qu'une seule pizza.\\
+Un client viendra dans notre pizzeria uniquement si les deux conditions suivantes sont remplies :
+\begin{enumerate}
+    \item Tous les ingrédients qu'il aime sont sur la pizza
+    \item Aucun des ingrédients qu'il n'aime pas se trouve sur la pizza
+\end{enumerate}
+Nous devons décider des ingrédients qui iront sur cette pizza afin de maximiser le nombre de clients qui achèteront cette pizza.
+
+\section{Petites instances du problème : recherche explicite}
+
+Tout d'abord, nous pouvons nous demander ce qu'est une solution au problème.\newline
+Nous avons choisit, ici, qu'une solution serait représentée par une liste d'ingredients.
+Un ingrédient de cette liste est un ingrédient qu'un client à dit aimer ou détester et chaque ingrédient n'apparaît qu'au plus une fois dans la liste.
+
+Ainsi, si nous supposons N le nombre d'ingredients disponibles au total, la liste solution aura entre 0 et N ingrédients.\newline
+Mais si nous cherchons à calculer le nombre de solutions totales, la chose se complique un peu.
+
+Soit n le nombre d'ingrédients et k la taille de la liste solution souhaitée, le nombre de combinaisons possible est calculé par la formule suivante :
+$$C_{n}^{k}=\frac{n!}{k!(n-k)!}$$
+Sauf qu'ici, nous cherchons le nombre de solutions totales, ce qui revient à faire le calcul précédent pour toutes les tailles de listes allant de 0 à N.\newline
+On obtient ainsi le calcul suivant:
+$$\sum_{k=0}^{n}\bigl(C_{n}^{k}\bigr)$$
+Par exemple, si nous avons 6 ingrédients, le calcul devient :
+\begin{align*}
+    \sum_{k=0}^{6}\bigl(C_{6}^{k}\bigr)&=\sum_{k=0}^{6}\bigl(\frac{6!}{k!(6-k)!}\bigr)\\
+    &=\frac{6!}{0!(6-0)!}+\frac{6!}{1!(6-1)!}+...+\frac{6!}{5!(6-5)!}+\frac{6!}{6!(6-6)!}\\
+    &= 1 + 6 + 15 + 20 + 15 + 6 + 1\\
+    &=64
+\end{align*}
+
+Nous pouvons, naïvement, essayer de produire un programme permettant de trouver la solution au problème.\newline
+Nous pouvons par exemple créer le code suivant : 
+\lstinputlisting[linerange={22-40}]{branch.py}
+
+
+\end{document}
