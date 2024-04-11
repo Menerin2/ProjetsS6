@@ -1,8 +1,8 @@
-PWD /home/moi/Documents/cours/L3/S6/Opti/DonneesCodePizza/Rapport
+PWD /home/moi/Documents/cours/L3/S6/Projets/ProjetsS6/opti/Rapport
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /home/moi/Documents/cours/L3/S6/Opti/DonneesCodePizza/Rapport/rapport.tex
+INPUT /home/moi/Documents/cours/L3/S6/Projets/ProjetsS6/opti/Rapport/rapport.tex
 OUTPUT rapport.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
