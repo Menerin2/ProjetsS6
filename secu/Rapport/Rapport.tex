@@ -74,9 +74,32 @@
         \lstinputlisting[linerange={89-98}]{ui.py}
 \newpage
 \section{Exercice 3 :}
-
-
-        
-
-
+    \subsection{Question 1 :}
+        Grâce aux logs que nous avons pû récupérer, nous pouvons réussir à identifier plusieurs informations concernant l'attaque.\newline
+        On peut tout d'abord repérer que l'attaque bruteforce a commencé à 8h58 et 35 secondes.
+        On peut l'identifier car à partie de la ligne 268 des logs, nous pouvons observer un nombre anormal de requêtes qui sont toutes efféctuées dans un laps de temps très court.
+    \subsection{Question 2 :}
+        Nous pouvons voir à partir de la ligne 1321 jusqu'à la ligne ... que l'attaquant répète les 2 même requêtes en changeant uniquement l'extension.
+        Il utilise les extensions :
+        \begin{itemize}
+            \item .php
+            \item .phmtl
+            \item .php3
+            \item .php4
+            \item .php5
+            \item .php6
+            \item .php7
+            \item .phar
+        \end{itemize}
+    \subsection{Question 3 :}
+        Il s'arrête à l'extension .phar, ayant sûrement trouvé une faille pour s'introduire dans le système grâce à cette extension.
+        Il s'agit aussi de l'extension qu'il utilisera pour le reste de ses requêtes.
+    \subsection{Question 4 :}
+        Nous pouvons voir que l'attanquant utilise le fichier php pour exécuter les commandes suivantes :
+        \begin{description}
+            \item[Ligne 1340 :] Il télécharge un fichier fiche\_de\_poste.odt.
+            \item[Ligne 1341 :] 
+            \item[Ligne 1342 :] Il modifie les droits d'accès au ficheir qu'il vient de déplacer.
+            \item[Ligne 1343 :] Il entre dans le fichier afin, possiblement, d'en récupérer les données.
+        \end{description}
 \end{document}
