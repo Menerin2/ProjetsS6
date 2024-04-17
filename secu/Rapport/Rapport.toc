@@ -12,3 +12,9 @@
 \contentsline {subsection}{\numberline {3.2}Question 2 :}{6}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Question 3 :}{6}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Question 4 :}{6}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Exercice 4 :}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Question 1 :}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Question 2 :}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Question 3 :}{7}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Question 4 :}{8}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Question 5 :}{8}{subsection.4.5}%

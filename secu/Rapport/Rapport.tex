@@ -102,4 +102,29 @@
             \item[Ligne 1342 :] Il modifie les droits d'accès au ficheir qu'il vient de déplacer.
             \item[Ligne 1343 :] Il entre dans le fichier afin, possiblement, d'en récupérer les données.
         \end{description}
+\section{Exercice 4 :}
+    \subsection{Question 1 :}
+        Après un peu de recherche, nous avons trouvé que les SMS/MMS sont stockés dans une base de donnée nommée : \textbf{mms.sms.db}\newline
+        Son chemin est le suivant : $filesystem/data/user\_de/0/com.android.providers.telephony/databases$
+    \subsection{Question 2 :}
+        Nous avons trouvé deux messages parlant d'identifiants. Voici les informations les concernant : 
+        \begin{itemize}
+            \item ID : 148\newline
+             date : 1683893316000 = vendredi 12 mai 2023 12:08:36\newline
+             contenu : Bonjour à tous, petit message collectif pour vous annoncer que les identifiants de tous les utilisateurs de l’intranet vont être changé d’ici 2 semaines. Je reviendrais vers vous lorsque le changement aura lieu. Bonne journée.
+            \item ID : 151\newline
+             date : 1684736105000 = lundi 22 mai 2023 06:15:05\newline
+             contenu : Bonjour tout le monde, le changement des identifiants viens d’avoir lieu, vous trouverez dans l’image jointe vos nouveaux identifiants. N’hésitez pas si vous rencontrez des problèmes. Bonne journée.
+        \end{itemize}
+    \subsection{Question 3 :}
+        Nous savons désormais que les identifiants ont été envoyés dans une image jointe à un message. 
+        Un tout petit peu de recherche nous permet de retrouver l'image ci-dessous à l'adresse :\newline
+        $filesystem/data/user\_de/0/com.android.providers.telephony/app\_parts$\newline
+        \includegraphics[scale=0.5]{id.jpg}\newline
+        Il est donc très facile désormais de trouver que le mot de passe associé aux RH est "!RH2023"
+    \subsection{Question 4 :}
+        
+    \subsection{Question 5 :}
+        En cherchant, nous pouvons trouver un fichier contenant la base de données du calendar.
+        En regardant les events à l'intérieur, nous trouvons un évènement nommé "Réparation téléphonique" le  
 \end{document}
