@@ -39,6 +39,8 @@ def get100Iteration(listeIngredient, listeClient):
     listeScore = []
     choixIngredient = genererFirstRecette(listeIngredient)
     listeScore.append(nbAime(choixIngredient, listeClient))
+    min = 10000
+    max = 0
     for i in range(99):
         choixIngredient = getModif(listeIngredient, choixIngredient)
         listeScore.append(nbAime(choixIngredient, listeClient))
@@ -57,7 +59,7 @@ def perturbation(listeIngredient, choixIngredient, listeClient):
         return choixTemp, True
     return choixIngredient, False
 
-fichier = open('a_exemple.txt')
+fichier = open('d_difficile.txt')
 nbClient = int(fichier.readline())
 listeIngredient = []
 listeClient = []
@@ -66,15 +68,14 @@ for i in range(nbClient):
     ajout(fichier, listeIngredient, listeClient)
 choixIngredient = random.sample(listeIngredient, k=random.randint(1,len(listeIngredient)))
 print(choixIngredient)
-print(nbAime(choixIngredient, listeClient))
-'''(score, choixIngredient) = get100Iteration(listeIngredient, listeClient)
+#print(nbAime(choixIngredient, listeClient))
+(score, choixIngredient) = get100Iteration(listeIngredient, listeClient)
 accept = 0
 tented = 0
-print(12*len(listeIngredient), 100*len(listeIngredient))
-while accept < 12*20 and tented < 100*20:
+while accept < 12*10 and tented < 100*10:
     (choixIngredient, isBetter) = perturbation(listeIngredient, choixIngredient, listeClient)
     if isBetter:
         accept+=1
     tented+=1
     print(accept, tented)
-print(nbAime(choixIngredient, listeClient))'''
+print(nbAime(choixIngredient, listeClient))

@@ -62,5 +62,19 @@ Nous pouvons, naïvement, essayer de produire un programme permettant de trouver
 Nous pouvons par exemple créer le code suivant : 
 \lstinputlisting[linerange={22-40}]{branch.py}
 
+\section{Grosses instances du problème : métaheuristiques}
+\subsection{Recuit Simulé : fait par Léo}
+    Pour notre recuit simulé, entre chaque solution, nous autorisons trois mouvements différents. 
+    \begin{itemize}
+        \item l'ajout d'un ingrédient qui n'est pas encore dans la solution
+        \item l'échange d'un ingrédient par un autre qui n'est pas encore dans la solution
+        \item la suppression d'un ingrédient de la solution
+    \end{itemize}
+    \textit{Dû à certains problèmes, je n'ai pas pû implémenter la suite de l'algorithme. La suite du rapport concerne ce que j'aurais souhaité implémenter}\newline
+    Comme expliqué dans le cour, je comptais faire une 100aine de modifications aléatoires puis de faire la moyenne de variation dans leurs scores.
+    Je comptais faire débuter la température $T_0$ à 1000 puis de la faire diminuer de 0,9*$T_n$ à chaque fois que soit 120 solutions sont acceptés soit que 1000 solutions ont été tentées
+    J'ai décidé d'arrêter l'algorithme si nous ne constatons plus de changement après que la température ait changé 2 fois.
+    Pour cela, nous avons mis un compteur qui se réinitialise à chaque modification de solution qui détermine l'arrêt des modifications et donc de l'algorithme
+
 
 \end{document}
