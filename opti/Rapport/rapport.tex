@@ -76,5 +76,23 @@ Nous pouvons par exemple créer le code suivant :
     J'ai décidé d'arrêter l'algorithme si nous ne constatons plus de changement après que la température ait changé 2 fois.
     Pour cela, nous avons mis un compteur qui se réinitialise à chaque modification de solution qui détermine l'arrêt des modifications et donc de l'algorithme
 
+\subsection{Algorithme Genetique : fait par Lautaro}
+    Pour notre algorithme genetique, nous devons mettre en place differents elements propres à cet algorithme:
+    \begin{itemize}
+        \item La taille de la population: pour la taille de la population j'ai choisi un nombre assez grand mais je ne voulais pas qu'il soit trop élevé donc j'ai choisi 100.
+        \item l'operateur de croisement: pour faire le crossover on utilise un valeur x generee aleatoirement (sous certaines contraintes)
+            et on prendra la partie gauche du premier parent jusqu'a l'indice x et concatene a cela la partie apres l'indice x du deuxieme parent.
+            Petite precision: je garde la meilleure recette d'une generation vers la suivante a l'indice 0 pour la conserver.
+        \item la mutation: pour realiser la mutation, nous remplaçons un ingredient de la recette en mutation par un ingredient de la liste d'ingredients du probleme traité.
+            J'ai choisi un probabilité de mutation basse pour commencer qui sera de 1\%.
+        \item le critere d'arret: au debut mon critere d'arret etait la trouvaille d'une recette parfaite ayant tous les ingredients aimés et aucun detesté,
+            mais j'ai rapidement compris que ce n'etait pas si simple. J'ai donc changé d'idée et
+            j'ai choisi deux criteres d'arret qui sont: un nombre maximum de generations (qui est de 1000)
+            et un arret dans le cas ou le score de la meilleure recette de chaque generation n'augmente pas pendant 15 generations d'affilé.
+            J'ai ensuite testé mon algorithme sur les problemes mais quand j'ai fait le D, cela prenait trop de temps alors j'ai decidé de mettre le maximum de generations à 100 pour le probleme D.
+            Finalement pour le probleme E j'ai mis le maximum de generations a 10 pour avoir un resultat car je craignais que cela prenne bien trop de temps avec une valeur plus grande.
+    \end{itemize}
+    Les solutions pour chaque probleme sont nommees sous la forme "solutionA\_genetique.txt" par exemple, pour chaque probleme.
+
 
 \end{document}

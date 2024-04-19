@@ -1,4 +1,5 @@
-\BOOKMARK [1][-]{section.1}{\376\377\000L\000e\000\040\000p\000r\000o\000b\000l\000\350\000m\000e\000\040\000:}{}% 1
-\BOOKMARK [1][-]{section.2}{\376\377\000P\000e\000t\000i\000t\000e\000s\000\040\000i\000n\000s\000t\000a\000n\000c\000e\000s\000\040\000d\000u\000\040\000p\000r\000o\000b\000l\000\350\000m\000e\000\040\000:\000\040\000r\000e\000c\000h\000e\000r\000c\000h\000e\000\040\000e\000x\000p\000l\000i\000c\000i\000t\000e}{}% 2
-\BOOKMARK [1][-]{section.3}{\376\377\000G\000r\000o\000s\000s\000e\000s\000\040\000i\000n\000s\000t\000a\000n\000c\000e\000s\000\040\000d\000u\000\040\000p\000r\000o\000b\000l\000\350\000m\000e\000\040\000:\000\040\000m\000\351\000t\000a\000h\000e\000u\000r\000i\000s\000t\000i\000q\000u\000e\000s}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{\376\377\000R\000e\000c\000u\000i\000t\000\040\000S\000i\000m\000u\000l\000\351\000\040\000:\000\040\000f\000a\000i\000t\000\040\000p\000a\000r\000\040\000L\000\351\000o}{section.3}% 4
+\BOOKMARK [1][-]{section.1}{Le probl\350me :}{}% 1
+\BOOKMARK [1][-]{section.2}{Petites instances du probl\350me : recherche explicite}{}% 2
+\BOOKMARK [1][-]{section.3}{Grosses instances du probl\350me : m\351taheuristiques}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Recuit Simul\351 : fait par L\351o}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Algorithme Genetique : fait par Lautaro}{section.3}% 5
