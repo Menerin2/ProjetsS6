@@ -18,7 +18,6 @@ def fitness_recette(recette, liste_gouts_clients):
             score += len(ingredients_aimes_dans_recette) / max(1, len(aime))
     return score
 
-
 def crossover(parent1, parent2):
     point_de_crossover = random.randint(1, min(len(parent1), len(parent2)) - 1)
     enfant = parent1[:point_de_crossover] + parent2[point_de_crossover:]
@@ -30,10 +29,10 @@ def mutation(recette, listeIngredients, proba_mutation):
             recette[i] = random.choice(listeIngredients)
     return recette
 
-def algo_genetique(listeIngredients, liste_gouts_clients, taille_population, mutation):
-    population_listeRecettes = [generer_recette_initiale(listeIngredients) for x in range(taille_population)]
+def algo_genetique(listeIngredients, liste_gouts_clients, taille_population, proba_mutation, nombre_de_generations):
+    population_listeRecettes = [generer_recette_initiale(listeIngredients) for _ in range(taille_population)]
     #recetteParfaite = False
-    bonneRecette = population_listeRecettes[0]
+    #bonneRecette = population_listeRecettes[0]
 
     #while recetteParfaite == False:
     for generations in range(nombre_de_generations):
@@ -60,5 +59,42 @@ def algo_genetique(listeIngredients, liste_gouts_clients, taille_population, mut
 
     return meilleureRecette
 
-#meilleureRecette = algo_genetique(listeIngredients, liste_gouts_clients, taille_population, proba_mutation, nombre_de_generations)
+def creerListeGoutsClients(fichier,nbClient):
+
+    liste_gouts = []
+
+    for i in range(nbClient):
+
+        ligne = fichier.readline()
+        txt = ligne.split()
+        for j in range(int(txt[0])):
+            liste_gouts[i][0].append(txt[j+1])
+
+        ligne = fichier.readline()
+        txt = ligne.split()
+        for j in range(int(txt[0])):
+            liste_gouts[i][1].append(txt[j+1])
+
+    return liste_gouts
+
+def ecritureReponse(fichier, recette):
+    fichier.write(str(len(recette)))
+    for i in range(len(recette)):
+        fichier.write(" " + recette[i])
+
+
+fichierIn = open(sys.argv[1], "r")
+fichierOut = open(sys.argv[2], "w")
+nbClient = int(fichierIn.readline())
+
+listeIngredients = []
+listeIngredients = creaListeIngredtient(fichierIn, nbClient)
+
+liste_gouts_clients = []
+liste_gouts_clients = creerListeGoutsClients(fichierIn,nbClient)
+
+
+meilleureRecette = algo_genetique(listeIngredients, liste_gouts_clients, taille_population, proba_mutation, nombre_de_generations)
+
+ecritureReponse(fichierOut, meilleureRecette)
 
