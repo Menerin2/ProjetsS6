@@ -15,12 +15,12 @@ def fitness_recette(recette, liste_gouts_clients):
     for aime, deteste in liste_gouts_clients:
         if all(ingredient in recette for ingredient in aime) and not any(ingredient in recette for ingredient in deteste):
             ingredients_aimes_dans_recette = [ingredient for ingredient in aime if ingredient in recette]
-            score += len(ingredients_aimes_dans_recette) / max(1, len(aime);
+            score += len(ingredients_aimes_dans_recette) / max(1, len(aime))
     return score
 
 
 def crossover(parent1, parent2):
-    point_de_crossover = random.randint(1, min(len(parent1), len(parent2)) - 1
+    point_de_crossover = random.randint(1, min(len(parent1), len(parent2)) - 1)
     enfant = parent1[:point_de_crossover] + parent2[point_de_crossover:]
     return enfant
 

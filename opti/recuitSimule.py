@@ -1,26 +1,18 @@
 import random
 from fonctionTestScore import *
 
-def ajout(fichier, listeIngredient, listeClient, cpt):
+def ajout(fichier, listeIngredient, listeClient):
     ligne = fichier.readline()
     txt = ligne.split()
     client = []
-    client.append(cpt)
     for j in range(int(txt[0])):
         client.append(txt[j+1])
         if txt[j+1] not in listeIngredient:
             listeIngredient.append(txt[j+1])
     listeClient.append(client)
-    return listeIngredient, listeClient
 
-def getFirstIteration(listeIngredient):
-    choixIngredient = []
-    for i in range(random.randint(0, len(listeIngredient))):
-        ingredient = listeIngredient[random.randint(0, len(listeIngredient)-1)]
-        while ingredient in choixIngredient:
-            ingredient = listeIngredient[random.randint(0, len(listeIngredient)-1)]
-        choixIngredient.append(ingredient)
-    return choixIngredient
+def genererFirstRecette(listeIngredient):
+    return random.sample(listeIngredient, k=random.randint(1,len(listeIngredient)))
 
 def getModif(listeIngredient, choixIngredient):
     choix = random.randint(0, 2)
@@ -45,7 +37,7 @@ def getModif(listeIngredient, choixIngredient):
 
 def get100Iteration(listeIngredient, listeClient):
     listeScore = []
-    choixIngredient = getFirstIteration(listeIngredient)
+    choixIngredient = genererFirstRecette(listeIngredient)
     listeScore.append(nbAime(choixIngredient, listeClient))
     for i in range(99):
         choixIngredient = getModif(listeIngredient, choixIngredient)
@@ -65,14 +57,17 @@ def perturbation(listeIngredient, choixIngredient, listeClient):
         return choixTemp, True
     return choixIngredient, False
 
-fichier = open('e_elabore.txt')
+fichier = open('a_exemple.txt')
 nbClient = int(fichier.readline())
 listeIngredient = []
 listeClient = []
 for i in range(nbClient):
-    (listeIngredient, listeClient)=ajout(fichier, listeIngredient, listeClient, i)
-    (listeIngredient, listeClient)=ajout(fichier, listeIngredient, listeClient, i)
-(score, choixIngredient) = get100Iteration(listeIngredient, listeClient)
+    ajout(fichier, listeIngredient, listeClient)
+    ajout(fichier, listeIngredient, listeClient)
+choixIngredient = random.sample(listeIngredient, k=random.randint(1,len(listeIngredient)))
+print(choixIngredient)
+print(nbAime(choixIngredient, listeClient))
+'''(score, choixIngredient) = get100Iteration(listeIngredient, listeClient)
 accept = 0
 tented = 0
 print(12*len(listeIngredient), 100*len(listeIngredient))
@@ -82,4 +77,4 @@ while accept < 12*20 and tented < 100*20:
         accept+=1
     tented+=1
     print(accept, tented)
-print(nbAime(choixIngredient, listeClient))
+print(nbAime(choixIngredient, listeClient))'''

@@ -6,16 +6,11 @@ def nbAime(choixIngredient, listeClient):
     return cptAime
 
 def testAime(choixIngredient, clientAime):
-    cpt = 0
-    for ingredient in clientAime:
-        if(ingredient in choixIngredient):
-            cpt +=1
-    if(cpt == len(clientAime)-1):
+    if all(ingredient in choixIngredient for ingredient in clientAime):
         return True
     return False
 
 def testDeteste(choixIngredient, clientDeteste):
-    for ingredient in clientDeteste:
-        if(ingredient in choixIngredient):
-            return True
+    if any(ingredient in clientDeteste for ingredient in choixIngredient):
+        return True
     return False
